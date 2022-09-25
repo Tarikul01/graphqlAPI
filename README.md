@@ -1,6 +1,6 @@
 # Graphql api
 
-In this project i will create some api for frontend use expressjs,mongodb and graphql step by step.
+In this project i will create some api for frontend using expressjs,mongodb and graphql step by step.
 
  ## 🚀 About Me
 ### Md. Tarikul
