@@ -37,3 +37,6 @@ app.listen(process.env.PORT,()=>{
 })
 
 ```
+
+### Database connection
+- create db folder then create connectionDb function then import inside server.js file
