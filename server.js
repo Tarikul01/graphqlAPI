@@ -10,10 +10,10 @@ connectDB();
 
 
 
-app.get("/",(req,res)=>{
-    res.json({msg:"Hello graphql"});
-});
-app.get("/graphql",graphqlHTTP({
+// app.use("/",(req,res)=>{
+//     res.json({msg:"Hello graphql"});
+// });
+app.use("/graphql",graphqlHTTP({
     schema:schema,
     graphiql:true,
 }));

@@ -8,12 +8,12 @@ const {}=require("./queries");
 
 
 // Import Mutaions 
-const {}=require("./mutation");
+const {}=require("./mutations");
 
 
 // Define queryType
 const QueryType=new GraphQLObjectType({
-    name:"QueryTpe",
+    name:"QueryType",
     description:"Queries",
     fields:{}
 });
