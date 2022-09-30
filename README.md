@@ -40,3 +40,12 @@ app.listen(process.env.PORT,()=>{
 
 ### Database connection
 - create db folder then create connectionDb function then import inside server.js file
+ 
+
+ ### Create graphqlHTTP playground use this middleware
+```bash
+app.use("/graphql",graphqlHTTP({
+    schema:schema,
+    graphiql:true,
+}));
+```
