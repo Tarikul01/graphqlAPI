@@ -2,6 +2,6 @@ const jwt=require('jsonwebtoken');
 
 
 const createJwtToken=(user)=>{
-    return jwt.sign(user,"123454",{expiresIn:"30 days"})
+    return jwt.sign(user,process.env.JWT_SECRET,{expiresIn:process.env.JWT_EXPIRES});
 };
 module.exports={createJwtToken};
