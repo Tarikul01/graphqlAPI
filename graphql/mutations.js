@@ -19,8 +19,27 @@ const register={
 
         await user.save();
         const token=createJwtToken(user)
-        return JSON.stringify(token);
+        return token;
     }
 }
 
-module.exports={register};
+
+const login={
+    type:GraphQLString,
+    args:{
+        email:{type:GraphQLString},
+        password:{type:GraphQLString},
+    },
+    async resolve(parent,args){
+         
+        const user=await User.findOne({email:args.email}).select("+password");
+        // console.log(user,args.password,user.password)
+        if(!user ||args.password !==user.password){
+            throw new Error("Invalid credentials");
+        }
+        const token=createJwtToken(user);
+        return token;
+    }
+}
+
+module.exports={register,login};
